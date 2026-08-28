@@ -18,7 +18,7 @@ const recipeSchema = new mongoose.Schema(
     isFeatured: { type: Boolean, default: false },
     status: { type: String, enum: ['active', 'archived'], default: 'active' },
   },
-  { timestamps: true }
+  { timestamps: true, collection: 'recipies' }
 );
 
-module.exports = mongoose.models.Recipe || mongoose.model('Recipe', recipeSchema);
+module.exports = mongoose.models.Recipe || mongoose.model('Recipe', recipeSchema, 'recipies');

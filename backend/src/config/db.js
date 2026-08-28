@@ -24,7 +24,7 @@ const connectDB = async () => {
     await Favorite.createCollection();
     await Report.createCollection();
     await Payment.createCollection();
-    console.log('✨ Verified database collections: users, recipes, favorites, reports, payments');
+    console.log('✨ Verified database collections: users, recipies, favorites, reports, payments');
 
     const count = await Recipe.countDocuments();
     console.log(`ℹ️ MongoDB Atlas currently stores ${count} recipes.`);
