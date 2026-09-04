@@ -42,7 +42,8 @@ export default function ProfilePage() {
         window.location.href = res.data.url;
       }
     } catch (err) {
-      toast.error('Stripe Checkout failed.');
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || 'Stripe Checkout failed.';
+      toast.error(errorMsg);
     } finally {
       setPurchasing(false);
     }

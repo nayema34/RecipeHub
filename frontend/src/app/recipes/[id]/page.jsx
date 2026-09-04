@@ -122,7 +122,8 @@ export default function RecipeDetailsPage() {
         window.location.href = res.data.url;
       }
     } catch (err) {
-      toast.error('Purchase initiation failed.');
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || 'Purchase initiation failed.';
+      toast.error(errorMsg);
     } finally {
       setPurchasing(false);
     }

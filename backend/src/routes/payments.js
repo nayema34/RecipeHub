@@ -36,16 +36,11 @@ router.post('/create-checkout-session', verifyToken, async (req, res) => {
       const priceData = {
         currency: 'usd',
         unit_amount: priceAmount,
-      };
-
-      if (type === 'premium' && productId && productId.startsWith('prod_')) {
-        priceData.product = productId;
-      } else {
-        priceData.product_data = {
+        product_data: {
           name: title,
           description: description,
-        };
-      }
+        },
+      };
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
