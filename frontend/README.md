@@ -5,7 +5,7 @@ RecipeHub is a full-stack recipe sharing platform built with Next.js (App Router
 ## Features
 - **Public Routes**: Home page (with Hero Banner, Dynamic Featured Recipes, Dynamic Popular Recipes, 2 Extra Static Sections, Framer Motion), Browse Recipes (MongoDB `$in` category filter & server-side pagination), Recipe Details (Like count/button, Stripe purchase, Favorite bookmarking, Report modal), Login, Register.
 - **Authentication**: JWT authentication with HTTPOnly cookies, Credential Login, Google Login, password validation rules (minimum 6 characters, uppercase & lowercase).
-- **User Dashboard**: Overview stats, Add Recipe (Enforces 2-recipe limit for standard users with Stripe upgrade prompt), My Recipes (View, edit, delete), My Favorites, My Purchases, Profile (Update name, image URL, upgrade to Premium PRO chef tier).
+- **User Dashboard**: Overview stats, Add Recipe (Enforces 2-recipe limit for standard users with Stripe upgrade prompt), My Recipes (View, edit, delete), My Favorites, My Purchases, Profile.
 - **Admin Dashboard**: Overview stats, Manage Users (Block/unblock toggle), Manage Recipes (Homepage featured toggle & delete), Recipe Reports (Remove reported recipe / dismiss report), Stripe Payment Transactions list.
 - **Dark / Light Theme Toggle**: Persistent mode switcher.
 - **Responsive UI/UX**: Full device responsiveness, smooth loading states, custom 404 error page.
